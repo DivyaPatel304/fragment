@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.mdev.demofregm.WelcomeFragment"
+        android:label="Welcome Fragment"
+        tools:layout="@layout/fragment_welcome" />
+
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.mdev.demofregm.MessageFragment"
+        android:label="Message Fragment"
+        tools:layout="@layout/fragment_message" />
+
+    <action
+        android:id="@+id/action_welcomeFragment_to_messageFragment"
+        app:destination="@id/messageFragment" />
+
+    <action
+        android:id="@+id/action_messageFragment_to_welcomeFragment"
+        app:destination="@id/welcomeFragment"
+        app:popUpTo="@id/welcomeFragment"
+        app:popUpToInclusive="true" />
+
+</navigation>
